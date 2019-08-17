@@ -1,14 +1,14 @@
-const runHarvester = require('runHarvester')
-const runUpgrader = require('runUpgrader')
+const harvester = require('harvester')
+const upgrader = require('upgrader')
 
 const creepManager = () => {
   for (const name in Game.creeps) {
     const creep = Game.creeps[name]
     if (creep.memory.role == 'harvester') {
-      runHarvester(creep)
+      harvester(creep)
     }
     if (creep.memory.role == 'upgrader') {
-      runUpgrader(creep)
+      upgrader(creep)
     }
   }
 }

@@ -9,7 +9,7 @@ const chooseTarget = () => {
   return Game.spawns['Spawn1']
 }
 
-const runHarvester = creep => {
+const harvester = creep => {
   if (creep.memory.depositing && creep.carry.energy == 0) {
     console.log(`Stop Depositing`)
     creep.memory.depositing = false
@@ -42,4 +42,4 @@ const runHarvester = creep => {
   }
 }
 
-module.exports = runHarvester
+module.exports = harvester

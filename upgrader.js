@@ -5,7 +5,7 @@ const chooseSource = creep => {
   return sources[sourceIndex]
 }
 
-const runUpgrader = creep => {
+const upgrader = creep => {
   if (creep.memory.upgrading && creep.carry.energy == 0) {
     creep.memory.upgrading = false
     // console.log(`${creep.name} is now harvesting`);
@@ -35,4 +35,4 @@ const runUpgrader = creep => {
   }
 }
 
-module.exports = runUpgrader
+module.exports = upgrader
