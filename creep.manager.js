@@ -1,5 +1,5 @@
-const roleHarvester = require('role.harvester')
-const roleUpgrader = require('role.upgrader')
+const runHarvester = require('runHarvester')
+const runUpgrader = require('runUpgrader')
 
 const creepSpawner = {
   run() {
@@ -9,7 +9,7 @@ const creepSpawner = {
         runHarvester(creep)
       }
       if (creep.memory.role == 'upgrader') {
-        roleUpgrader.run(creep)
+        runUpgrader(creep)
       }
     }
   },
